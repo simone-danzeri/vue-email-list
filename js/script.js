@@ -8,6 +8,7 @@ createApp({
   data() {
     return {
       mailArray: [],
+      isReady: false
     };
   },
   methods: {
@@ -18,6 +19,9 @@ createApp({
           .then((response) => {
             const serverData = response.data;
             this.mailArray.push(serverData.response);
+            if(i==9) {
+                this.isReady = true;
+            }
           });
       }
       console.log(this.mailArray);

@@ -19,7 +19,7 @@
   </head>
   <body>
     <div id="app">
-      <ul>
+      <ul v-if="isReady">
         <li v-for="mails in mailArray">{{ mails }}</li>
       </ul>
     </div>
