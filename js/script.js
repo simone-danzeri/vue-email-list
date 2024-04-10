@@ -18,13 +18,15 @@ createApp({
           .get("https://flynn.boolean.careers/exercises/api/random/mail")
           .then((response) => {
             const serverData = response.data;
+            /* console.log(response.data); */
             this.mailArray.push(serverData.response);
+            /* console.log(serverData); */
             if(i==9) {
                 this.isReady = true;
             }
           });
-      }
-      console.log(this.mailArray);
+        }
+        console.log(this.mailArray);
     },
   },
   mounted() {
